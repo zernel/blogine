@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = Blogine::VERSION
   s.authors     = ["Zernel"]
   s.email       = ["itzernel@gmail.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Blogine."
-  s.description = "TODO: Description of Blogine."
+  s.homepage    = "https://github.com/zernel/blogine"
+  s.summary     = "A lightweight mountable blog engine for Rails."
+  s.description = "A lightweight mountable blog engine for Rails."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]

@@ -1,5 +1,5 @@
 # Blogine
-Short description and motivation.
+A lightweight mountable blog engine for Rails.
 
 ## Usage
 How to use my plugin.
