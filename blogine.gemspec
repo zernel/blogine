@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
   # s.add_dependency 'bootstrap-sass', '~> 3.3.7'
   s.add_dependency 'bootstrap', '~> 4.0.0.beta3'
   s.add_dependency 'jquery-rails'
+  s.add_dependency 'rb-readline'
 
   s.add_development_dependency "pry"
   s.add_development_dependency "sqlite3"
