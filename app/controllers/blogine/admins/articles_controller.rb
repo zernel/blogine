@@ -1,5 +1,7 @@
 module Blogine::Admins
   class ArticlesController < ApplicationController
+    before_action :find_article, only: [:edit, :update, :destroy]
+
     def index
       @articles = Blogine::Article.all
     end
@@ -19,11 +21,9 @@ module Blogine::Admins
     end
 
     def edit
-      @article = Blogine::Article.find(params[:id])
     end
 
     def update
-      @article = Blogine::Article.find(params[:id])
       if @article.update_attributes(article_params)
         flash[:notice] = "Updated article successfully."
         redirect_to admins_articles_path
@@ -33,7 +33,6 @@ module Blogine::Admins
     end
 
     def destroy
-      @article = Blogine::Article.find(params[:id])
       @article.destroy
       flash[:notice] = "Deleted article successfully."
       redirect_to admins_articles_path
@@ -42,6 +41,10 @@ module Blogine::Admins
     private
     def article_params
       params.require(:article).permit(:category_id, :title, :date, :content)
+    end
+
+    def find_article
+      @article = Blogine::Article.find(params[:id])
     end
   end
 end
