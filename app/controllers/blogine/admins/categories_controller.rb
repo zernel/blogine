@@ -40,7 +40,7 @@ module Blogine::Admins
 
     private
     def category_params
-      params.require(:category).permit(:name)
+      params.require(:category).permit(:name, :slug)
     end
 
     def find_category

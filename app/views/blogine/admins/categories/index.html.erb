@@ -4,6 +4,7 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Slug</th>
       <th>Articles</th>
       <th></th>
     </tr>
@@ -13,6 +14,7 @@
     <% @categories.each do |category| %>
       <tr>
         <td><%= category.name %></td>
+        <td><%= category.slug %></td>
         <td>
           <ul>
             <% category.articles.each do |article| %>
