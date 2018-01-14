@@ -29,15 +29,6 @@
   </div>
 
   <div class="col-sm-4">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Categories</h5>
-        <ul>
-          <% @categories.each do |category| %>
-            <li><%= category %></li>
-          <% end %>
-        </ul>
-      </div>
-    </div>
+    <%= render 'category_sidebar' %>
   </div>
 </div>
