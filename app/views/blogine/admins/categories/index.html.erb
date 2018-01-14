@@ -4,7 +4,7 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Article Count</th>
+      <th>Articles</th>
       <th></th>
     </tr>
   </thead>
@@ -13,7 +13,13 @@
     <% @categories.each do |category| %>
       <tr>
         <td><%= category.name %></td>
-        <td><%= category.articles.count %></td>
+        <td>
+          <ul>
+            <% category.articles.each do |article| %>
+              <li><%= article.title %></li>
+            <% end %>
+          </ul>
+        </td>
         <td>
           <%= link_to "Edit", edit_admins_category_path(category), class: 'btn btn-sm btn-outline-primary' %>
           <%= link_to "Delete", admins_category_path(category), method: :delete, class: 'btn btn-sm btn-outline-danger', data: { confirm: 'Are you sure?' } %>
