@@ -15,3 +15,8 @@
 //= require popper
 //= require bootstrap
 //= require_tree .
+
+
+$(function() {
+  $('.date-selector').datepicker();
+})

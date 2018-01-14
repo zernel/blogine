@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180111144912) do
+ActiveRecord::Schema.define(version: 20180111144635) do
 
   create_table "blogine_articles", force: :cascade do |t|
     t.string "title"
-    t.datetime "date"
+    t.date "date"
     t.text "content"
     t.integer "category_id"
     t.datetime "created_at", null: false
