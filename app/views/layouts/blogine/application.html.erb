@@ -12,9 +12,13 @@
   </head>
 
   <body id='blogine'>
-    <%= render 'admins_topbar' if admins_page? %>
+    <% if admins_page? %>
+      <%= render 'admins_topbar' %>
+    <% else %>
+      <%= render 'topbar' %>
+    <% end %>
 
-    <div id='main-content' class="container">
+    <div id='main-content' class="container <%= 'admins' if admins_page?  %>">
       <%#= render "flash_content" %>
       <%= render 'admins_navbar' if admins_page? %>
 

@@ -1,1 +1,43 @@
-<h1>Blogine Home Page</h1>
+<div id='home-page' class="row">
+  <div id='left-side' class="col-sm-8">
+    <h4>
+      <%= @last_article.title %>
+      <small class='float-right'><%= l @last_article.date %></small>
+    </h4>
+    <hr />
+    <div class='text-right font-weight-light'>
+      Category: <%= @last_article.category %>
+    </div>
+    <p>
+      <%= truncate @last_article.content, length: 100 %>
+    </p>
+    <a href="#">Read More »</a>
+    <hr />
+    <br />
+
+    <h6>Recent <%= @recent_articles.count %> articles</h6>
+    <hr />
+    <ul>
+      <% @recent_articles.each_with_index do |article, index| %>
+        <% next if index == 0 %>
+        <li><%= l article.date %>: <%= link_to article.title, '' %></li>
+      <% end %>
+    </ul>
+
+    <div>
+    </div>
+  </div>
+
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Categories</h5>
+        <ul>
+          <% @categories.each do |category| %>
+            <li><%= category %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

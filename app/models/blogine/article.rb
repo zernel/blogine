@@ -4,6 +4,7 @@ module Blogine
 
     validates_presence_of :title, :category, :date
 
+    default_scope  -> { order("date DESC, id DESC") }
     after_initialize :set_defaults
 
     private
