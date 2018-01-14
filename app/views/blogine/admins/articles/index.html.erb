@@ -1,0 +1,28 @@
+<p><%= link_to "New Article", new_admins_article_path, class: 'btn btn-primary' %></p>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Category</th>
+      <th>Title</th>
+      <th>Last Modification Time</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <% @articles.each do |article| %>
+        <td><%= l article.date %></td>
+        <td><%= article.category %></td>
+        <td><%= article.title %></td>
+        <td><%= l article.updated_at %></td>
+        <td>
+          <%= link_to "Edit", edit_admins_article_path(article), class: 'btn btn-sm btn-outline-primary' %>
+          <%= link_to "Delete", admins_article_path(article), method: :delete, class: 'btn btn-sm btn-outline-danger', data: { confirm: 'Are you sure?' } %>
+        </td>
+      <% end %>
+    </tr>
+  </tbody>
+</table>

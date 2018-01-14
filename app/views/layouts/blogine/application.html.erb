@@ -14,8 +14,9 @@
   <body id='blogine'>
     <%= render 'admins_topbar' if admins_page? %>
 
-    <div class="container">
+    <div id='main-content' class="container">
       <%#= render "flash_content" %>
+      <%= render 'admins_navbar' if admins_page? %>
 
       <%= yield %>
     </div>
