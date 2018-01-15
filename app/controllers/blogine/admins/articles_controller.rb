@@ -40,7 +40,7 @@ module Blogine::Admins
 
     private
     def article_params
-      params.require(:article).permit(:category_id, :title, :date, :content)
+      params.require(:article).permit(:category_id, :title, :release_date, :content)
     end
 
     def find_article

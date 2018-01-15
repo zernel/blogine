@@ -3,7 +3,7 @@
 <table class="table table-bordered">
   <thead>
     <tr>
-      <th>Date</th>
+      <th>Release Date</th>
       <th>Category</th>
       <th>Title</th>
       <th>Last Modification Time</th>
@@ -14,7 +14,7 @@
   <tbody>
     <% @articles.each do |article| %>
       <tr>
-        <td><%= l article.date %></td>
+        <td><%= l article.release_date %></td>
         <td><%= article.category %></td>
         <td><%= article.title %></td>
         <td><%= l article.updated_at, format: :long %></td>
