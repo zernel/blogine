@@ -6,6 +6,7 @@ PATH
       jquery-rails
       rails (~> 5.1.4)
       rb-readline
+      redcarpet (= 3.4.0)
       simple_form
 
 GEM
@@ -49,7 +50,7 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (8.0.0)
-    autoprefixer-rails (7.2.4)
+    autoprefixer-rails (7.2.5)
       execjs
     bootstrap (4.0.0.beta3)
       autoprefixer-rails (>= 6.0.3)
@@ -117,6 +118,7 @@ GEM
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
     rb-readline (0.5.5)
+    redcarpet (3.4.0)
     sass (3.5.5)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
