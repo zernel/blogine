@@ -4,5 +4,10 @@ module Blogine
       @last_article = Blogine::Article.first
       @recent_articles = Blogine::Article.first(8)
     end
+
+    def category
+      @category = Blogine::Category.find_by(slug: params[:slug]) or not_found
+      @articles = @category.articles
+    end
   end
 end

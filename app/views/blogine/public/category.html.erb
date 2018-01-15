@@ -1,0 +1,21 @@
+<div id='home-page' class="row">
+  <div id='left-side' class="col-sm-8">
+    <p class="alert alert-info" role="alert">
+      <%= @category %>: <%= @articles.count %> <%= "article".pluralize(@articles.count) %> in total
+    </p>
+
+    <% @articles.group_by { |a| a.release_date.year }.each do |year, articles| %>
+      <h4><%= year %></h4>
+      <% articles.each do |article| %>
+        <ul>
+          <li><%= link_to article.title, '' %> (<%= l article.release_date %>)</li>
+        </ul>
+      <% end %>
+      <hr />
+    <% end %>
+  </div>
+
+  <div class="col-sm-4">
+    <%= render 'category_sidebar' %>
+  </div>
+</div>

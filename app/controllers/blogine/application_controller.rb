@@ -4,5 +4,9 @@ module Blogine
 
     def admins_page?; false; end
     helper_method :admins_page?
+
+    def not_found
+      raise ActionController::RoutingError.new('Not Found')
+    end
   end
 end

@@ -1,9 +1,9 @@
 <div class="card">
   <div class="card-body">
-    <h5 class="card-title">Categories</h5>
+    <h5 class="card-title">All Categories</h5>
     <ul>
       <% all_categories.each do |category| %>
-        <li><%= category %></li>
+        <li><%= link_to category, category_path(slug: category.slug) %></li>
       <% end %>
     </ul>
   </div>
