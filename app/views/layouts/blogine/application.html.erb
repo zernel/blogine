@@ -19,8 +19,8 @@
     <% end %>
 
     <div id='main-content' class="container <%= 'admins' if admins_page?  %>">
-      <%#= render "flash_content" %>
       <%= render 'admins_navbar' if admins_page? %>
+      <%= render "flash_content" %>
 
       <%= yield %>
     </div>

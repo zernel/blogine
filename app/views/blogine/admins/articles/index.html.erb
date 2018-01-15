@@ -17,7 +17,7 @@
         <td><%= l article.date %></td>
         <td><%= article.category %></td>
         <td><%= article.title %></td>
-        <td><%= l article.updated_at %></td>
+        <td><%= l article.updated_at, format: :long %></td>
         <td>
           <%= link_to "Edit", edit_admins_article_path(article), class: 'btn btn-sm btn-outline-primary' %>
           <%= link_to "Delete", admins_article_path(article), method: :delete, class: 'btn btn-sm btn-outline-danger', data: { confirm: 'Are you sure?' } %>

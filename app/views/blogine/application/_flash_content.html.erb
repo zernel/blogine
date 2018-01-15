@@ -1,3 +1,5 @@
-<div class="alert alert-warning" role="alert">
-  This is a warning alert—check it out!
-</div>
+<% flash.each do |key, value| %>
+  <div class="alert <%= bootstrap_alert_klass(key) %>" role="alert">
+    <%= value.html_safe %>
+  </div>
+<% end %>
