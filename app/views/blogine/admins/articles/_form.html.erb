@@ -8,8 +8,16 @@
     </div>
   </div>
 
-  <%= f.input :title %>
+  <div class="row">
+    <div class="col-sm-8">
+      <%= f.input :title %>
+    </div>
+    <div class="col-sm-4">
+      <%= f.input :slug %>
+    </div>
+  </div>
   <%= f.input :content, input_html: { rows: 20 } %>
+  <%= f.input :tags %>
 
   <%= f.submit class: 'btn btn-primary' %>
   <%= link_to "Back", :back, class: 'btn btn-outline-secondary' %>

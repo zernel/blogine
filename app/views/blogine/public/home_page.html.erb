@@ -3,7 +3,7 @@
     <% if @last_article %>
       <h4>
         <%= @last_article.title %>
-        <small class='float-right'><%= l @last_article.date %></small>
+        <small class='float-right'><%= l @last_article.release_date %></small>
       </h4>
       <hr />
       <div class='text-right font-weight-light'>
@@ -22,7 +22,7 @@
     <ul>
       <% @recent_articles.each_with_index do |article, index| %>
         <% next if index == 0 %>
-        <li><%= l article.date %>: <%= link_to article.title, '' %></li>
+        <li><%= l article.release_date %>: <%= link_to article.title, '' %></li>
       <% end %>
     </ul>
   </div>

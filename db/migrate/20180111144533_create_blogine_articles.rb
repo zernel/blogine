@@ -5,6 +5,8 @@ class CreateBlogineArticles < ActiveRecord::Migration[5.1]
       t.date :release_date
       t.text :content
       t.integer :category_id
+      t.string :tags
+      t.string :slug
 
       t.timestamps
     end

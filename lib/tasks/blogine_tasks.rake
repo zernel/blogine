@@ -1,4 +1,4 @@
-# desc "Explaining what the task does"
-# task :blogine do
-#   # Task goes here
-# end
+desc "Load jekyll templates"
+task :blogine do
+  # Task goes here
+end

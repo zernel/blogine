@@ -8,6 +8,7 @@ module Blogine::Admins
 
     def new
       @article = Blogine::Article.new
+      @article.release_date = Date.today
     end
 
     def create
@@ -40,7 +41,7 @@ module Blogine::Admins
 
     private
     def article_params
-      params.require(:article).permit(:category_id, :title, :release_date, :content)
+      params.require(:article).permit(:category_id, :title, :release_date, :content, :slug, :tags)
     end
 
     def find_article

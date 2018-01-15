@@ -17,6 +17,8 @@ ActiveRecord::Schema.define(version: 20180111144635) do
     t.date "release_date"
     t.text "content"
     t.integer "category_id"
+    t.string "tags"
+    t.string "slug"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
