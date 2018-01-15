@@ -9,5 +9,10 @@ module Blogine
       @category = Blogine::Category.find_by(slug: params[:slug]) or not_found
       @articles = @category.articles
     end
+
+    def article
+      @article = Blogine::Article.find_by(slug: params[:slug]) or not_found
+      @category = @article.category
+    end
   end
 end

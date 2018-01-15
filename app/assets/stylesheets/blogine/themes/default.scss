@@ -15,14 +15,15 @@ body#blogine {
     flex: 1 1 100%;
     padding-bottom: 10vh;
     padding-top: 3vh;
+    margin-bottom: 5vh;
 
     min-height:600px;
     height:auto!important;
     height:600px;
   }
 
-  #home-page {
-    padding: 25px;
+  .public-pages {
+    padding: 0 20px;
 
     #left-side {
       padding: 0 30px;

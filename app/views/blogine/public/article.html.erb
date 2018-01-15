@@ -1,0 +1,10 @@
+<div class="public-pages">
+  <div class="alert alert-secondary" role="alert">
+    <span class="font-weight-light">Category: <%= link_to @category, category_path(slug: @category.slug) %></span>
+  </div>
+  <h2><%= @article.title %></h2>
+  <hr />
+  <p class="font-weight-light">Date: <%= l @article.release_date %></p>
+
+  <%= simple_format @article.content %>
+</div>
