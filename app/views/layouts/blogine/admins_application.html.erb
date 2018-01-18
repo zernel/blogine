@@ -12,9 +12,12 @@
   </head>
 
   <body id='blogine'>
-    <%= render 'topbar' %>
+    <%= render 'admins_topbar' %>
 
-    <div id='main'>
+    <div id='admins-main' class="container">
+      <%= render 'admins_navbar' %>
+      <%= render "flash_content" %>
+
       <%= yield %>
     </div>
   </body>
