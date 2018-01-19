@@ -8,5 +8,7 @@
 
   <h2 class='title'><%= @article.title %></h2>
 
-  <%= render_markdown(@article.content) %>
+  <div>
+    <%= render_markdown(@article.content) %>
+  </div>
 </article>

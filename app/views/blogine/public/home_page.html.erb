@@ -1,33 +1,35 @@
-<div class="public-pages row">
-  <div id='left-side' class="col-sm-8">
-    <% if @last_article %>
-      <h4>
-        <%= @last_article.title %>
-        <small class='float-right'><%= l @last_article.release_date %></small>
-      </h4>
-      <hr />
-      <div class='text-right font-weight-light'>
-        Category: <%= @last_article.category %>
-      </div>
-      <p>
-        <%= truncate @last_article.content, length: 100 %>
-      </p>
-      <%= link_to "Read More »", article_path(@last_article.slug) %>
-      <hr />
-      <br />
-    <% end %>
-
-    <h6>Recent <%= @recent_articles.count %> articles</h6>
-    <hr />
-    <ul>
-      <% @recent_articles.each_with_index do |article, index| %>
-        <% next if index == 0 %>
-        <li><%= link_to article.title, article_path(article.slug) %> (<%= l article.release_date %>)</li>
+<div class='home-content'>
+  <div class="row">
+    <div id='left-side' class="col-sm-8">
+      <% if @last_article %>
+        <h4>
+          <%= @last_article.title %>
+          <small class='float-right'><%= l @last_article.release_date %></small>
+        </h4>
+        <hr />
+        <div class='text-right font-weight-light'>
+          Category: <%= @last_article.category %>
+        </div>
+        <p>
+          <%= truncate @last_article.content, length: 100 %>
+        </p>
+        <%= link_to "Read More »", article_path(@last_article.slug) %>
+        <hr />
+        <br />
       <% end %>
-    </ul>
-  </div>
 
-  <div class="col-sm-4">
-    <%= render 'category_sidebar' %>
+      <h6>Recent <%= @recent_articles.count %> articles</h6>
+      <hr />
+      <ul>
+        <% @recent_articles.each_with_index do |article, index| %>
+          <% next if index == 0 %>
+          <li><%= link_to article.title, article_path(article.slug) %> (<%= l article.release_date %>)</li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="col-sm-4">
+      <%= render 'category_sidebar' %>
+    </div>
   </div>
 </div>
