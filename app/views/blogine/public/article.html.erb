@@ -1,13 +1,12 @@
 <article>
-  <div class='row'>
-    <div class="col-sm-12">
-      <%= link_to "«  #{@category} Index", category_path(slug: @category.slug), class: 'float-left' %>
-      <div class="timestamp">Date: <%= l @article.release_date %></div>
-
-      <h1><%= @article.title %></h1>
-      <hr />
-
-      <%= render_markdown(@article.content) %>
-    </div>
+  <div class='float-left'>
+    <%= link_to category_path(slug: @category.slug) do %>
+      « Category Index <small>(<%= @category %>)</small>
+    <% end %>
   </div>
+  <div class="timestamp">Date: <%= l @article.release_date %></div>
+
+  <h2 class='title'><%= @article.title %></h2>
+
+  <%= render_markdown(@article.content) %>
 </article>
